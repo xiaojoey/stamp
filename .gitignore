@@ -8,3 +8,5 @@
 *.arg
 
 customData/
+refseq/GRCh38*
+setup.py
