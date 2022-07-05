@@ -51,6 +51,8 @@ def read_arguments(arg_file):
 		value = line[(n+1):].strip()
 		arguments[arg] = value
 	fp.close()
+	print('here')
+	print(arguments)
 	return arguments
 
 def write_arguments(arguments, arg_file):

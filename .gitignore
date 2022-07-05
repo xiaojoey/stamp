@@ -10,3 +10,7 @@
 customData/
 refseq/GRCh38*
 setup.py
+bam/
+bamleftalign
+consensus.realign.recal/
+mouseRef

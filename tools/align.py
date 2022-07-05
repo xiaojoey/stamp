@@ -831,12 +831,15 @@ def align_reads_to_reference(fastq_r1, fastq_r2, reference, probe_info):
 	#mapping
 	#map filtered reads to the reference genome
 	#-L 100,5 forces matching after the clipped probe sequences
-	cmd = "%s mem -L 100,5 -M %s -C %s %s" % (bwa, reference, fastq_r1, fastq_r2)
+	cmd = "%s mem -L 100,5 -M -C %s %s %s" % (bwa, reference, fastq_r1, fastq_r2)
 	pf = pipe_output(cmd)
 	head = []
 	alignments = []
 	read_name = False
 	n = 0
+	print('debugg one')
+	print(cmd)
+	print(pf.stdout)
 	for line in pf.stdout:
 		n += 1
 		line = line.rstrip("\r\n")
